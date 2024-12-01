@@ -25,7 +25,6 @@ def get_sorted_values() -> tuple[list[int], list[int]]:
 
 def calculate_distance() -> int:
     left_values, right_values = get_sorted_values()
-    
 
     left_length, right_length = len(left_values), len(right_values)
 
