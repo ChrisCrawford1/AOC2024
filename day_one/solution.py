@@ -9,14 +9,12 @@ def _read_values_from_file() -> list[str]:
 
 def get_sorted_values() -> tuple[list[int], list[int]]:
     raw_values = _read_values_from_file()
-
     unsorted_left_values, unsorted_right_values = [], []
 
     for val in raw_values:
         left, right = val.split()
         unsorted_left_values.append(left)
         unsorted_right_values.append(right)
-
 
     unsorted_left_values.sort()
     unsorted_right_values.sort()
@@ -36,7 +34,6 @@ def calculate_distance() -> int:
         print("Left and right lists length do not match, cannot complete calculation")
         return 0
 
-
     total_distance = 0
 
     # As we have already checked that the left and right are the same length, 
@@ -48,7 +45,6 @@ def calculate_distance() -> int:
         total_distance += distance
 
     return total_distance
-
 
 calculated_distance = calculate_distance()
 print("The total distance is {}".format(calculated_distance))
